@@ -60,6 +60,8 @@ img {
 /* Header */
 .header {
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .header-conainer {
   display: flex;
@@ -91,6 +93,7 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-logo {
   padding-top: 24px;
@@ -144,6 +147,7 @@ img {
   letter-spacing: 0.02em;
   color: #434455;
   padding: 24px 0;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-contact a {
@@ -202,6 +206,7 @@ img {
   height: 56px;
   border: none;
   border-radius: 4px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button:hover {
@@ -278,6 +283,8 @@ img {
   background-color: #ffffff;
   width: calc((100% - 72px) / 4);
   border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .team-list-ul {
   display: flex;
@@ -297,9 +304,10 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-svg {
-  fill: #4d5ae5;
+  fill: #f4f4fd;
 }
 .team-list-link:focus,
 .team-list-link:hover {
@@ -348,10 +356,15 @@ img {
 .portfolio-our {
   margin-bottom: 72px;
 }
-
+.portfolio-list li:hover,
+.portfolio-list li:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
 .portfolio-card {
   background-color: #fff;
   width: calc((100% - 48px) / 3);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-div {
   padding: 32px 16px;
@@ -381,6 +394,9 @@ img {
   position: relative;
   overflow: hidden;
 }
+.portfolio-card:hover .portfolio-desk {
+  transform: translateY(0%);
+}
 .portfolio-desk {
   padding: 40px 32px;
   font-size: 16px;
@@ -394,11 +410,9 @@ img {
   width: 100%;
   height: 100%;
   transform: translateY(100%);
-  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.portfolio-card:hover .portfolio-desk {
-  transform: translateY(0);
-}
+
 /* /Team */
 
 /* Footer */
